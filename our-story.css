@@ -1,0 +1,81 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Georgia", serif;
+}
+
+/* NAVBAR */
+header {
+  background-color: #7a0c0c; /* deep red */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+/* LOGO */
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* NAV LINKS */
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f5e6d3; /* soft cream */
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+  border-bottom: 1px solid #f5e6d3;
+}
+
+/* ICONS */
+.icons {
+  font-size: 18px;
+  color: #f5e6d3;
+}
+
+/* OUR STORY SECTION */
+.our-story {
+  background-color: #efe3cf; /* warm beige */
+  padding: 80px 10%;
+}
+
+.story-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* TITLE */
+.our-story h2 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+  color: #5a2a1a;
+}
+
+/* TEXT */
+.our-story p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #5a2a1a;
+}
