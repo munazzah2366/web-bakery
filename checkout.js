@@ -1,6 +1,6 @@
 <script>
 document.getElementById("checkout-form").addEventListener("submit", function(e) {
-    e.preventDefault();
+    e.preventDefault(); 
 
     // clear cart after order
     localStorage.removeItem("cart");
