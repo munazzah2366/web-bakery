@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Billing Page</title>
+    <link rel="stylesheet" href="billing.css">
+</head>
+
+<header>
+    <nav>
+       <div class="logo"><img src="logo.png" alt="Fresh Bread Logo"></div>
+
+
+         <ul>
+        <li><a href="our-story.html">OUR STORY</a></li>
+        <li><a href="baked-goods.html">BAKED GOODS</a></li>
+        <li><a href="cupcakes.html">CUPCAKES</a></li>
+        <li><a href="chocolates.html">CHOCOLATES</a></li>
+        <li><a href="pastries.html">PASTRIES</a></li>
+        
+    </ul>
+
+      
+
+        <div class="icons">
+        <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+        </div>
+
+    </nav>
+</header>
+
+
+
+<body>
+
+
+    <form id="checkout-form">
+
+        <!-- Payment Method -->
+        <h2>Payment Method</h2>
+
+        <input type="radio" id="card" name="payment" value="card" checked>
+        <label for="card">Credit / Debit Card</label><br>
+
+        <input type="radio" id="cod" name="payment" value="cod">
+        <label for="cod">Cash on Delivery</label><br><br>
+
+
+        <!-- Card Details -->
+        <div id="card-details">
+            <h3>Card Details</h3>
+
+            <label>Card Number</label><br>
+            <input type="text" name="card-number"><br><br>
+
+            <label>Expiry Date</label><br>
+            <input type="text" name="expiry"><br><br>
+
+            <label>CVV</label><br>
+            <input type="text" name="cvv"><br><br>
+        </div>
+
+
+        <button type="submit">Pay</button>
+
+    </form>
+
+
+    <!-- JS -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("checkout-form");
+        const cardOption = document.getElementById("card");
+        const codOption = document.getElementById("cod");
+        const cardDetails = document.getElementById("card-details");
+
+        function toggleCardDetails() {
+            if (cardOption.checked) {
+                cardDetails.style.display = "block";
+            } else {
+                cardDetails.style.display = "none";
+            }
+        }
+
+        cardOption.addEventListener("change", toggleCardDetails);
+        codOption.addEventListener("change", toggleCardDetails);
+
+        toggleCardDetails();
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            localStorage.removeItem("cart");
+
+            alert("Order placed successfully!");
+            window.location.href = "base.html";
+        });
+    });
+    </script>
+
+
+
+<footer class="minimal-footer">
+  <div class="footer-inner">
+    
+    <div class="footer-links">
+      <a href="#">OUR STORY</a>
+      <a href="#">SHOP</a>
+    </div>
+
+    <div class="footer-copy">
+© 2026 Bread House. All rights reserved
+    </div>
+
+     <div class="footer-copy">
+freshbread@gmail.com
+    </div>
+
+  </div>
+</footer>
+
+
+
+</body>
+</html>
