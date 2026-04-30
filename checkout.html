@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Fresh Bread</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<header>
+    <nav>
+       <div class="logo"><img src="logo.png" alt="Fresh Bread Logo"></div>
+
+
+         <ul>
+        <li><a href="our-story.html">OUR STORY</a></li>
+        <li><a href="baked-goods.html">BAKED GOODS</a></li>
+        <li><a href="cupcakes.html">CUPCAKES</a></li>
+        <li><a href="chocolates.html">CHOCOLATES</a></li>
+        <li><a href="pastries.html">PASTRIES</a></li>
+        
+    </ul>
+
+      
+
+        <div class="icons">
+         🔍 <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+        </div>
+
+    </nav>
+
+
+</header>
+
+<div class="checkout-container">
+
+    <!-- LEFT: Customer Info -->
+    <div class="checkout-form">
+
+        <h2>Billing Details</h2>
+
+        <form id="checkout-form">
+
+            <label>Full Name</label>
+            <input type="text" id="name" required>
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" id="phone" required>
+
+            <label>Address</label>
+            <input type="text" id="address" required>
+
+            <label>City</label>
+            <input type="text" id="city" required>
+
+            <label>Payment Method</label>
+            <select id="payment">
+                <option value="cash">Cash on Delivery</option>
+                <option value="card">Credit / Debit Card</option>
+            </select>
+
+            <button type="submit" class="place-order">Place Order</button>
+
+        </form>
+
+    </div>
+
+
+    <!-- RIGHT: Order Summary -->
+    <div class="order-summary">
+
+        <h2>Your Order</h2>
+
+        <div id="order-items">
+            <!-- JS will insert cart items here -->
+        </div>
+
+        <h3 id="order-total">Total: Dhs. 0</h3>
+
+    </div>
+
+</div>
+
+<footer class="minimal-footer">
+  <div class="footer-inner">
+    
+    <div class="footer-links">
+      <a href="#">OUR STORY</a>
+      <a href="#">SHOP</a>
+    </div>
+
+    <div class="footer-copy">
+© 2026 Bread House. All rights reserved
+    </div>
+
+     <div class="footer-copy">
+freshbread@gmail.com
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+
+<script src="checkout.js"></script>
+
+
+
+
+
+
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const orderItems = document.getElementById("order-items");
+const totalDisplay = document.getElementById("order-total");
+
+function loadCheckout() {
+    orderItems.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+        total += item.price;
+
+        orderItems.innerHTML += `
+            <div>
+                <span>${item.name}</span>
+                <span>Dhs. ${item.price}</span>
+            </div>
+        `;
+    });
+
+    totalDisplay.textContent = "Total: Dhs. " + total;
+}
+
+loadCheckout();
+</script>
+
+
+
+
+
+</body>
+</html>

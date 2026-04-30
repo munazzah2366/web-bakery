@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.baked-goods h2 {
+  font-family: "Georgia", serif; 
+}
+
+
+body {
+  font-family: "Georgia", serif;
+}
+
+body {
+  background-color: #efe3cf;
+}
+
+
+header {
+  background-color: #4d0202; 
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+
+.logo img {
+  height: 90px;
+  width: auto;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f5e6d3; 
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+  border-bottom: 1px solid #f5e6d3;
+}
+
+
+.icons {
+  font-size: 18px;
+  color: #f5e6d3;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: "Georgia", serif;
+    background-color: #efe3cf;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #4d0202;
+}
+
+/* MAIN LAYOUT */
+.checkout-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* LEFT SIDE - FORM */
+.checkout-form {
+    flex: 1;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.checkout-form h2 {
+    margin-bottom: 20px;
+    color: #4d0202;
+}
+
+.checkout-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.checkout-form input,
+.checkout-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* PLACE ORDER BUTTON */
+.place-order {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background-color: #4d0202;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.place-order:hover {
+    background-color: #6a0303;
+}
+
+/* RIGHT SIDE - SUMMARY */
+.order-summary {
+    width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 20px;
+}
+
+.order-summary h2 {
+    margin-bottom: 15px;
+    color: #4d0202;
+}
+
+/* ITEMS AREA */
+#order-items {
+    margin-bottom: 20px;
+}
+
+#order-items div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+/* TOTAL */
+#order-total {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #4d0202;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #4d0202;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .checkout-container {
+        flex-direction: column;
+    }
+
+    .order-summary {
+        width: 100%;
+        position: static;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.minimal-footer {
+  background-color: #e7dcc8;
+  padding: 60px 80px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #4d0202;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #4d0202;
+}
