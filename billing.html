@@ -62,8 +62,22 @@
 
 
         <button type="submit">Pay</button>
+        <p id="successMessage" style="display:none; color:green; font-weight:bold;">
+  ✅ Order Placed Successfully!
+</p>
 
     </form>
+
+
+    <div id="successModal" class="modal">
+  <div class="modal-content">
+    <div class="checkmark">✔</div>
+    <h2>Order Placed</h2>
+    <p>Your order has been placed successfully.</p>
+    <button id="closeBtn">OK</button>
+  </div>
+</div>
+
 
 
     <!-- JS -->
@@ -88,15 +102,31 @@
         toggleCardDetails();
 
         form.addEventListener("submit", function (e) {
-            e.preventDefault();
+    e.preventDefault();
 
-            localStorage.removeItem("cart");
+    localStorage.removeItem("cart");
 
-            alert("Order placed successfully!");
-            window.location.href = "base.html";
-        });
+    // show modal instead of alert
+    document.getElementById("successModal").classList.add("show");
+});
+
+document.getElementById("closeBtn").addEventListener("click", function () {
+    window.location.href = "base.html";
+});
+
+
+
     });
     </script>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -119,7 +149,7 @@ freshbread@gmail.com
   </div>
 </footer>
 
-
+<script src="billing.js"></script>
 
 </body>
 </html>
